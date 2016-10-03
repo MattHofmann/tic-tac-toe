@@ -15,6 +15,7 @@
 		B4CBAB181D7598CF00386A26 /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB151D7598CF00386A26 /* board.png */; };
 		B4CBAB191D7598CF00386A26 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB161D7598CF00386A26 /* cross.png */; };
 		B4CBAB1A1D7598CF00386A26 /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CBAB171D7598CF00386A26 /* nought.png */; };
+		B4F44D241DA2B5400055AFCB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F44D231DA2B5400055AFCB /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B4CBAB151D7598CF00386A26 /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
 		B4CBAB161D7598CF00386A26 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		B4CBAB171D7598CF00386A26 /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
+		B4F44D231DA2B5400055AFCB /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,25 +62,42 @@
 		B4CBAB021D7598B500386A26 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				B4F44D251DA2B5490055AFCB /* Controller */,
+				B4F44D221DA2B5170055AFCB /* View */,
 				B4CBAB031D7598B600386A26 /* AppDelegate.swift */,
-				B4CBAB051D7598B600386A26 /* ViewController.swift */,
 				B4CBAB071D7598B600386A26 /* Main.storyboard */,
 				B4CBAB0A1D7598B600386A26 /* Assets.xcassets */,
 				B4CBAB0C1D7598B600386A26 /* LaunchScreen.storyboard */,
 				B4CBAB0F1D7598B600386A26 /* Info.plist */,
-				B4CBAB1B1D7598D800386A26 /* images */,
+				B4CBAB1B1D7598D800386A26 /* Resources */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
 		};
-		B4CBAB1B1D7598D800386A26 /* images */ = {
+		B4CBAB1B1D7598D800386A26 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				B4CBAB151D7598CF00386A26 /* board.png */,
 				B4CBAB161D7598CF00386A26 /* cross.png */,
 				B4CBAB171D7598CF00386A26 /* nought.png */,
 			);
-			name = images;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B4F44D221DA2B5170055AFCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4F44D231DA2B5400055AFCB /* CustomButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B4F44D251DA2B5490055AFCB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4CBAB051D7598B600386A26 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +178,7 @@
 			files = (
 				B4CBAB061D7598B600386A26 /* ViewController.swift in Sources */,
 				B4CBAB041D7598B600386A26 /* AppDelegate.swift in Sources */,
+				B4F44D241DA2B5400055AFCB /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +342,7 @@
 				B4CBAB141D7598B600386A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

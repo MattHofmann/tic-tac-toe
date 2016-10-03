@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var activeGame = true
+    var round = 0
     
     // 1 is noughts, 2 is crosses
     var activePlayer = 1
@@ -26,8 +27,10 @@ class ViewController: UIViewController {
     @IBAction func playAgain(_ sender: AnyObject) {
         
         activeGame = true
+        round = 0
         activePlayer = 1
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
         
         // delete the images from the button
         for i in 1..<10 {
@@ -47,6 +50,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
+        
+        round += 1
         
         let activePosition = sender.tag - 1
         
@@ -79,6 +84,7 @@ class ViewController: UIViewController {
                         winnerLabel.text = "Crosses has won!"
                     }
                     
+                    
                     UIView.animate(withDuration: 1, animations: {
                         
                         self.winnerLabel.center = CGPoint(x: self.winnerLabel.center.x + 500, y: self.winnerLabel.center.y)
@@ -87,11 +93,30 @@ class ViewController: UIViewController {
                     })
                     
                 }
+                
             }
             
         }
+        
+        if round >= 9  && activeGame {
 
-        print(sender.tag)
+            // we have a tie!
+            activeGame = false
+            
+            winnerLabel.isHidden = false
+            playAgainButton.isHidden = false
+            
+            winnerLabel.text = "It's a tie!"
+            
+            UIView.animate(withDuration: 1, animations: {
+                
+                self.winnerLabel.center = CGPoint(x: self.winnerLabel.center.x + 500, y: self.winnerLabel.center.y)
+                self.playAgainButton.center = CGPoint(x: self.playAgainButton.center.x + 500, y: self.playAgainButton.center.y)
+            })
+            
+        }
+
+        //print(sender.tag)
         
     }
     
@@ -107,10 +132,6 @@ class ViewController: UIViewController {
         playAgainButton.center = CGPoint(x: playAgainButton.center.x - 500, y: playAgainButton.center.y)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }
